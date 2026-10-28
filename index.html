@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>StudyBuddy ✦ School Command Centre</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<main>
+  <header>
+    <div>
+      <small>YOUR CLOUD SCHOOL COMMAND CENTRE</small>
+      <h1>StudyBuddy ✦</h1>
+      <p>Homework. Revision. Exams. Sorted everywhere.</p>
+    </div>
+    <div class="header-actions">
+      <button id="authBtn" class="secondary-btn">Sign In</button>
+      <button id="theme">☼</button>
+    </div>
+  </header>
+
+  <nav>
+    <button class="tab active" data-page="home">Home</button>
+    <button class="tab" data-page="homework">Homework</button>
+    <button class="tab" data-page="study">Study</button>
+    <button class="tab" data-page="chat">AI Chat</button>
+  </nav>
+
+  <section id="home" class="page">
+    <div class="hero"><span>🔥</span><div><b>Lock in.</b><p>Pick what you need to do right now.</p></div></div>
+    <div class="cards">
+      <button class="big" data-go="homework">📝<b>Homework</b><small>Track what is due</small></button>
+      <button class="big" data-go="study">🧠<b>Study</b><small>Quiz, explain & flashcards</small></button>
+      <button class="big" data-go="chat">🤖<b>Ask AI</b><small>Get help with a topic</small></button>
+      <button class="big" id="focus">⏱️<b>Focus</b><small>25-minute session</small></button>
+    </div>
+    <div class="panel"><b>Today's Overview</b><div id="today">Loading tasks...</div></div>
+  </section>
+
+  <section id="homework" class="page hidden">
+    <h2>Homework</h2>
+    <p>Synced across your iPad, phone, and laptop.</p>
+    <div class="form">
+      <input id="hwSubject" placeholder="Subject (e.g. Physics)">
+      <input id="hwTask" placeholder="What do you need to do?">
+      <input id="hwDate" type="date">
+      <button id="addHw" class="primary">+ Add homework</button>
+    </div>
+    <div id="hwList"></div>
+  </section>
+
+  <section id="study" class="page hidden">
+    <h2>Study tools</h2>
+    <p>Choose a mode, enter your topic, and let AI generate your materials.</p>
+    <div class="modes">
+      <button data-mode="explain" class="mode-btn active">🧠 Explain</button>
+      <button data-mode="quiz" class="mode-btn">🎯 Quiz me</button>
+      <button data-mode="cards" class="mode-btn">🗂 Flashcards</button>
+      <button data-mode="exam" class="mode-btn">📋 Exam practice</button>
+    </div>
+    <textarea id="topic" placeholder="e.g. efficiency in physics, quadratic expressions..."></textarea>
+    <button id="makePrompt" class="primary">Generate Study Guide →</button>
+    <div id="studyOut" class="panel hidden"></div>
+  </section>
+
+  <section id="chat" class="page hidden">
+    <h2>AI Study Chat</h2>
+    <p>Ask anything school-related. Answers generated right here.</p>
+    <textarea id="chatInput" placeholder="I'm stuck on..."></textarea>
+    <div class="chatBtns">
+      <button class="primary" id="ask">Ask AI →</button>
+    </div>
+    <div id="chatOutput" class="panel hidden"></div>
+    <div class="tip">💡 Try: “Explain this like I'm in Year 9, then give me 3 questions to check I understand.”</div>
+  </section>
+
+  <footer>StudyBuddy v2.5 • Cloud Edition</footer>
+</main>
+<script type="module" src="app.js"></script>
+</body>
+</html>
