@@ -1,0 +1,40 @@
+:root { font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", system-ui, sans-serif; background: #f6f7fb; color: #182033; }
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; }
+main { padding: 18px; max-width: 620px; margin: auto; }
+header { display: flex; justify-content: space-between; align-items: flex-start; }
+small { font-size: 10px; letter-spacing: 1.3px; opacity: .55; font-weight: 800; }
+h1 { font-size: 30px; margin: 4px 0; }
+h2 { font-size: 23px; margin: 5px 0; }
+p { color: #697287; margin: 5px 0 16px; font-size: 13px; }
+header button { border: 0; background: #fff; border-radius: 12px; padding: 9px; font-size: 15px; font-weight: 700; cursor: pointer; }
+.header-actions { display: flex; gap: 8px; }
+nav { display: flex; gap: 6px; background: #e9ebf2; padding: 5px; border-radius: 15px; margin: 18px 0; }
+.tab { flex: 1; border: 0; border-radius: 11px; padding: 9px; background: transparent; font-size: 12px; font-weight: 700; cursor: pointer; }
+.tab.active { background: #fff; box-shadow: 0 2px 8px #0001; }
+.hero { display: flex; gap: 14px; align-items: center; background: #e8edff; padding: 18px; border-radius: 19px; margin-bottom: 13px; }
+.hero span { font-size: 28px; }
+.hero p { margin: 3px 0 0; }
+.cards { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.big { border: 1px solid #e4e7ef; background: #fff; text-align: left; border-radius: 17px; padding: 16px; min-height: 105px; cursor: pointer; }
+.big b, .big small { display: block; margin-top: 7px; }
+.big small { letter-spacing: 0; color: #747c8e; font-size: 11px; }
+.panel, .tip { background: #fff; border: 1px solid #e4e7ef; border-radius: 16px; padding: 15px; margin-top: 13px; font-size: 13px; white-space: pre-wrap; }
+.panel div { margin-top: 8px; color: #70788a; }
+.form { display: grid; gap: 8px; }
+.form input, textarea { width: 100%; border: 1px solid #dfe3eb; background: #fff; border-radius: 13px; padding: 12px; font: inherit; font-size: 13px; outline: none; }
+.form button, .primary { border: 0; background: #283bd7; color: #fff; border-radius: 13px; padding: 12px; font-weight: 800; cursor: pointer; width: 100%; }
+.task { display: flex; align-items: center; gap: 10px; background: #fff; border: 1px solid #e4e7ef; padding: 12px; border-radius: 14px; margin-top: 8px; }
+.task .x { margin-left: auto; border: 0; background: #f0f1f5; border-radius: 9px; padding: 6px; cursor: pointer; }
+.task.done { text-decoration: line-through; opacity: .55; }
+.modes { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 10px; }
+.modes button { border: 1px solid #dfe3eb; background: #fff; border-radius: 12px; padding: 11px; font-size: 12px; font-weight: 700; cursor: pointer; }
+.modes button.active { border-color: #283bd7; background: #e8edff; }
+textarea { height: 120px; resize: vertical; margin-bottom: 9px; }
+.chatBtns { display: flex; gap: 8px; }
+.hidden { display: none; }
+footer { text-align: center; color: #9aa1b1; font-size: 10px; margin-top: 24px; }
+.dark { background: #101421; color: #f4f6fa; }
+.dark nav { background: #1b2130; }
+.dark .tab.active, .dark .big, .dark .panel, .dark .task, .dark textarea, .dark input, .dark .modes button, .dark header button, .dark .tip { background: #1a2030; color: #f4f6fa; border-color: #2b3244; }
+.dark p, .dark .panel div { color: #aeb7c9; }
